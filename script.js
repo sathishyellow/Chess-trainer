@@ -11,11 +11,13 @@ let moveIndex = 0;
 // INITIALIZE BOARD (IMPORTANT FOR iPad)
 // =====================
 document.addEventListener("DOMContentLoaded", () => {
-  board = Chessboard("board", {
-    draggable: true,
-    position: "start",
-    onDrop: onDrop
-  });
+board = Chessboard("board", {
+  draggable: true,
+  position: "start",
+  pieceTheme:
+    "https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/img/chesspieces/wikipedia/{piece}.png",
+  onDrop: onDrop
+});
 
   // Load opening AFTER board exists
   loadOpening("fried_liver");
