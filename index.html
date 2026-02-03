@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chess Opening Trainer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="libs/chessboard.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="top">
+      <h2 id="openingName">Loading...</h2>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+    </div>
+    <div id="board"></div>
+    <div class="feedback" id="message">Play the next move</div>
+    <div class="controls">
+      <button onclick="showHint()">Hint</button>
+      <button onclick="resetLine()">Reset</button>
+    </div>
+  </div>
+  <script src="libs/chess.js"></script>
+  <script src="libs/chessboard.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
