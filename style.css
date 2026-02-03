@@ -1,49 +1,106 @@
-body {
-  background: #f2f4f7;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+/* =========================
+   GLOBAL
+========================= */
+* {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  background: #f2f4f7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #222;
+}
+
+/* =========================
+   APP CONTAINER
+========================= */
 .app {
   max-width: 420px;
-  margin: auto;
-  padding: 15px;
+  margin: 0 auto;
+  padding: 16px;
 }
+
+/* =========================
+   HEADER
+========================= */
 .top h2 {
   margin: 0;
   font-size: 20px;
+  font-weight: 600;
 }
+
+/* =========================
+   PROGRESS BAR
+========================= */
 .progress-bar {
   width: 100%;
   height: 6px;
   background: #ddd;
   border-radius: 10px;
-  margin-top: 6px;
+  margin-top: 8px;
   overflow: hidden;
 }
+
 #progressFill {
   height: 100%;
   width: 0%;
   background: #4caf50;
-  transition: width 0.3s;
+  transition: width 0.3s ease;
 }
+
+/* =========================
+   CHESSBOARD (CRITICAL)
+========================= */
 #board {
+  width: 360px;
+  height: 360px;
   margin: 20px auto;
-  width: 100%;
 }
+
+/* =========================
+   FEEDBACK TEXT
+========================= */
 .feedback {
   font-size: 16px;
+  text-align: center;
   margin: 10px 0;
   min-height: 22px;
 }
+
+/* =========================
+   CONTROLS
+========================= */
 .controls {
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  margin-top: 10px;
 }
-button {
+
+.controls button {
   flex: 1;
-  padding: 12px;
-  font-size: 15px;
+  padding: 14px;
+  font-size: 16px;
   border: none;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  background: #ffffff;
+  color: #222;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   BUTTON ACTIVE STATE
+========================= */
+.controls button:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   MOBILE SMALL SCREENS
+========================= */
+@media (max-width: 380px) {
+  #board {
+    width: 320px;
+    height: 320px;
+  }
 }
